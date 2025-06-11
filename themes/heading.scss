@@ -1,0 +1,140 @@
+$os: "" !default;
+$theme: "" !default;
+
+#write {
+  // 标题属性
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @if $os == "windows" {
+      font-weight: bold; 
+    } @else if $os == "macos" {
+      font-weight: normal;
+    }
+    break-after: avoid-page !important;
+  }
+
+  h1 {
+    font-family: var(--heading-latin-font), var(--title-chinese-font), serif;
+    @if $os == "macos" {
+      font-weight: normal;
+    }
+    text-align: center;
+    column-span: all;
+    font-size: var(--title-font-size);
+  }
+  h2 {
+    font-family: var(--heading-latin-font), var(--h2-chinese-font), serif;
+    font-size: var(--h2-font-size);
+  }
+  h3 {
+    font-family: var(--heading-latin-font), var(--h3-chinese-font), serif;
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-font-size);
+  }
+  h4 {
+    font-family: var(--heading-latin-font), var(--h4-chinese-font), serif;
+    font-size: var(--h4-font-size);
+    line-height: var(--h4-font-size);
+  }
+  h5 {
+    font-family: var(--heading-latin-font), var(--h5-chinese-font), serif;
+    font-size: var(--h5-font-size);
+    line-height: var(--h5-font-size);
+  }
+  h6 {
+    font-family: var(--heading-latin-font), var(--h6-chinese-font), serif;
+    font-size: var(--h6-font-size);
+    /* 没有写错，为了避免行距太小才这么写 */
+    line-height: var(--h5-font-size);
+  }
+
+  // 下面是标题自动编号，初始化计数器。使用多级编号，编号后加空格模仿LaTeX
+  // 首先全局进行一次reset，这样即使不添加h1标题也可以使用较低级别的标题
+  counter-reset: heading-h2 heading-h3 heading-h4 heading-h5 heading-h6;
+  h1 {
+    counter-set: heading-h2 0 heading-h3 0 heading-h4 0 heading-h5 0 heading-h6 0;
+  }
+  h2 {
+    counter-set: heading-h3 0 heading-h4 0 heading-h5 0 heading-h6 0;
+  }
+  h3 {
+    counter-set: heading-h4 0 heading-h5 0 heading-h6 0;
+  }
+  h4 {
+    counter-set: heading-h5 0 heading-h6 0;
+  }
+  h5 {
+    counter-set: heading-h6 0;
+  }
+
+  h2:before {
+    @extend %h2-with-count;
+  }
+
+  h3:before {
+    @extend %h3-with-count;
+  }
+
+  h4:before {
+    @extend %h4-with-count;
+  }
+
+  h5:before {
+    @extend %h5-with-count;
+  }
+
+  h6:before {
+    @extend %h6-with-count;
+  }
+}
+
+// override the default style for focused headings
+h2.md-focus.md-heading:before {
+  @extend %h2-with-count;
+}
+h3.md-focus.md-heading:before {
+  @extend %h3-with-count;
+}
+h4.md-focus.md-heading:before {
+  @extend %h4-with-count;
+}
+h5.md-focus.md-heading:before {
+  @extend %h5-with-count;
+}
+h6.md-focus.md-heading:before {
+  @extend %h6-with-count;
+}
+
+@mixin heading-with-count($heading) {
+  counter-increment: heading-#{$heading};
+  margin-right: 1.2em;
+}
+
+%h2-with-count {
+  content: counter(heading-h2);
+  @include heading-with-count(h2);
+}
+
+%h3-with-count {
+  content: counter(heading-h2) "." counter(heading-h3);
+  @include heading-with-count(h3);
+}
+
+%h4-with-count {
+  content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4);
+  @include heading-with-count(h4);
+}
+
+%h5-with-count {
+  content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4) "." counter(heading-h5);
+  @include heading-with-count(h5);
+}
+
+%h6-with-count {
+  content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4) "." counter(heading-h5) "." counter(heading-h6);
+  @include heading-with-count(h6);
+}

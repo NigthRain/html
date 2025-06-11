@@ -1,0 +1,20 @@
+$os: "" !default;
+$theme: "" !default;
+
+blockquote {
+  font-style: normal;
+  font-family: var(--quote-latin-font), var(--quote-chinese-font), var(--base-latin-font), var(--base-chinese-font), -apple-system, serif;
+  font-size: var(--quote-font-size);
+  /* 左侧边框  */
+  border-left: calc(var(--blockquote-border-enabled) * 4px) solid var(--blockquote-border-color);
+  /* 文字离左边框的距离 */
+  padding-left: calc(2em - (var(--blockquote-border-enabled) * 4px));
+  padding-right: 2em;
+  /* 左边框离页面边的距离 */
+  margin-left: 0;
+}
+
+blockquote blockquote {
+  font-size: inherit;
+  padding-right: 0;
+}
