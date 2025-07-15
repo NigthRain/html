@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh_CN" data-theme-mode="light" data-light-theme="OneNote" data-dark-theme="sy-dark-grape">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="stage/protyle/js/lute/lute.min.js"></script>
+    <script src="stage/protyle/js/protyle-html.js?v=3.0.5"></script>
+    <link rel="stylesheet" type="text/css" id="baseStyle" href="stage/build/export/base.css?3.1.6"/>
+    <link rel="stylesheet" type="text/css" id="themeDefaultStyle" href="appearance/themes/OneNote/theme.css?3.1.6"/>
+    <link rel="stylesheet" type="text/css" id="themeStyle" href="appearance/themes/OneNote/theme.css?3.1.6"/>
+    <title>常用工具</title>
+    <!-- Exported by SiYuan v3.1.6 -->
+    <style>
+        body {font-family: var(--b3-font-family);background-color: var(--b3-theme-background);color: var(--b3-theme-on-background)}
+        .b3-typography, .protyle-wysiwyg, .protyle-title {font-size:16px !important}
+.b3-typography code:not(.hljs), .protyle-wysiwyg span[data-type~=code] { font-variant-ligatures: none }
+.li > .protyle-action {height:34px;line-height: 34px}
+.protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h1, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h2, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h3, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h4, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h5, .protyle-wysiwyg [data-node-id].li > .protyle-action ~ .h6 {line-height:34px;}
+.protyle-wysiwyg [data-node-id].li > .protyle-action:after {height: 16px;width: 16px;margin:-8px 0 0 -8px}
+.protyle-wysiwyg [data-node-id].li > .protyle-action svg {height: 14px}
+.protyle-wysiwyg [data-node-id].li:before {height: calc(100% - 34px);top:34px}
+.protyle-wysiwyg [data-node-id] [spellcheck] {min-height:26px;}
+.protyle-wysiwyg .p,
+.protyle-wysiwyg .code-block .hljs,
+.protyle-wysiwyg .table,
+.protyle-wysiwyg .render-node protyle-html,
+.protyle-wysiwyg .render-node > div[spin="1"],
+.protyle-wysiwyg [data-type="NodeHeading"] {}
+.protyle-wysiwyg [data-node-id] {}
+.protyle-wysiwyg .li {min-height:34px}
+.protyle-gutters button svg {height:26px}
+        /* temp_stylePlugin:siyuan/index.styl */
+.iconfont-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  margin-top: 2.5px;
+}
+.img-icon img {
+  width: 16px !important;
+  height: 16px !important;
+  margin-right: 8px;
+}
+.red {
+  color: #f00;
+}
+
+@font-face {
+    font-family: "霞鹜文楷 GB";
+    font-style: normal;
+    src: url("/plugins/siyuan-ttf-LXGWWenKaiGB-and-Twemoji/LXGWWenKaiGB-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Twitter Emoji';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/plugins/siyuan-ttf-LXGWWenKaiGB-and-Twemoji/Twemoji.Mozilla.ttf");
+}
+
+:root {
+    --b3-font-family-emoji: 'Twitter Emoji', sans-serif !important;
+    --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twitter Emoji', "Noto Color Emoji", "OpenMoji", "Apple Color Emoji", "Segoe UI Emoji", "Twitter Emoji", "Noto Color Emoji", "OpenMoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols" !important;
+    --b3-font-family: "霞鹜文楷 GB", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", "sans-serif", "Twitter Emoji", "Noto Color Emoji", "OpenMoji", "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji","Twitter Emoji", "Noto Color Emoji", "OpenMoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols" !important;
+}.plugin-webapp_custom-dock{padding:0;overflow:visible}.plugin-webapp_custom-dock .webapp{padding:4px;margin:2px 6px;border:1px solid transparent;font-size:16px}.plugin-webapp_custom-dock .webapp:hover{cursor:pointer;border-radius:4px;background-color:var(--b3-list-icon-hover)}.plugin-webapp_custom-dock .webapp span.func-btn{display:none}.plugin-webapp_custom-dock .webapp:hover span.func-btn{display:inline}.plugin-webapp_custom-dock .webapp svg{width:14px;height:14px;margin-right:6px}.inline-icon{width:14px;height:14px}.webapp-view{position:relative}.webapp-view #controller{position:absolute;top:0;left:0;background-color:#000000e6;color:#fff;padding:4px 2px;opacity:0}.webapp-view #controller>span{margin:0 6px}.webapp-view #controller:hover,.webapp-view #controller:focus{opacity:1}.webapp-view-controller{position:absolute;bottom:0;left:20px;background-color:#00000080;border-top-left-radius:4px;border-top-right-radius:4px;padding:4px 6px;color:#fff}.webapp-view-controller span{font-size:14px;display:none}.webapp-view-controller span.handle,.webapp-view-controller:hover span{display:inline-block}.webapp-view-controller:hover span.handle{display:none}.webapp-view-controller svg{width:12px;height:12px}.pointer{cursor:pointer}
+#helloPanel{border:1px rgb(189,119,119) dashed}.plugin-sample__custom-tab{background-color:var(--b3-theme-background);height:100%;width:100%;display:flex;justify-content:center;align-items:center}.plugin-sample__custom-dock{display:flex;justify-content:center;align-items:center}.plugin-sample__time{background:var(--b3-card-info-background);border-radius:4px;padding:2px 8px}
+
+        
+    </style>
+</head>
+<body>
+<div class="protyle-wysiwyg protyle-wysiwyg--attr" 
+style="max-width: 800px;margin: 0 auto;" 
+id="preview"><div data-subtype="h1" data-node-id="20240412152805-4cer7vz" data-type="NodeHeading" class="h1" title="常用工具" updated="20240526204259" custom-sy-fullwidth="true" custom-sy-readonly="false" id="20240412152805-4cer7vz"><div contenteditable="false" spellcheck="false">常用工具</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20240412152805-v7mq4g3" data-type="NodeParagraph" class="p" id="20240412152805-v7mq4g3" updated="20240412152805"><div contenteditable="false" spellcheck="false">‍</div><div class="protyle-attr" contenteditable="false"></div></div><div data-node-id="20240523004945-qltbeqr" data-type="NodeTable" class="table" colgroup="width: 107px;|width: 142px;|width: 156px;|width: 195px;||" id="20240523004945-qltbeqr" style="text-align: center;" updated="20240526204259"><div contenteditable="false"><table contenteditable="false" spellcheck="false"><colgroup><col style="width: 107px;" /><col style="width: 142px;" /><col style="width: 156px;" /><col style="width: 195px;" /><col /><col /></colgroup><thead><tr><th>类型</th><th>功能</th><th>首选</th><th>备选</th><th></th><th></th></tr></thead><tbody><tr><td>系统软件</td><td>磁盘管理</td><td>DiskGenius</td><td></td><td></td><td></td></tr><tr><td>系统软件</td><td>文件管理</td><td>everything</td><td>taglyst</td><td>XYplorer</td><td></td></tr><tr><td>系统软件</td><td>刻录启动</td><td></td><td></td><td></td><td></td></tr><tr><td>系统软件</td><td>安全管理</td><td></td><td>ESET security</td><td></td><td></td></tr><tr><td>系统软件</td><td>系统优化</td><td>dism++</td><td>微软电脑管家</td><td>GeekUninstaller</td><td></td></tr><tr><td>系统软件</td><td>右键优化</td><td>RightMenuMgr</td><td></td><td></td><td></td></tr><tr><td>系统软件</td><td>系统美化</td><td>拾光壁纸</td><td>FolderPainter</td><td></td><td></td></tr><tr><td>系统软件</td><td>压缩解压</td><td>bandzip</td><td>7zip</td><td></td><td></td></tr><tr><td>系统软件</td><td>浏览器</td><td>edge</td><td>chrome</td><td></td><td></td></tr><tr><td>系统软件</td><td>电子邮件</td><td>foxmail</td><td>mail</td><td></td><td></td></tr><tr><td>系统软件</td><td>下载</td><td>NDM</td><td>B23Downloader</td><td>qBittorrent</td><td>PanDownload</td></tr><tr><td>系统软件</td><td>同步盘</td><td>坚果云</td><td>onedriver</td><td></td><td></td></tr><tr><td>系统软件</td><td>网盘</td><td>Baidu</td><td>阿里云盘</td><td></td><td></td></tr><tr><td>系统软件</td><td>手机同步</td><td>Intel Unison</td><td>91助手</td><td>华为</td><td></td></tr><tr><td>系统软件</td><td>输入法</td><td>QQ拼音</td><td></td><td></td><td></td></tr><tr><td>远程服务</td><td>linux</td><td></td><td>WSL</td><td></td><td></td></tr><tr><td>远程服务</td><td>远程ssh</td><td>xterminal</td><td>Xshell</td><td>MobaXterm</td><td></td></tr><tr><td>远程服务</td><td>远程控制Win</td><td>RDP</td><td>ToDesk</td><td></td><td></td></tr><tr><td>远程服务</td><td>http服务端</td><td></td><td></td><td></td><td></td></tr><tr><td>远程服务</td><td>ftp服务端</td><td>vsftpd</td><td>FileZilla Server</td><td></td><td></td></tr><tr><td>远程服务</td><td>ftp客户端</td><td>FileZilla</td><td>FlashFXP</td><td></td><td></td></tr><tr><td>远程服务</td><td>web数据库</td><td>sqlite</td><td></td><td></td><td></td></tr><tr><td>远程服务</td><td>DBA</td><td></td><td>Dbeaver CE</td><td></td><td></td></tr><tr><td>多媒体</td><td>音乐播放</td><td>QQ音乐</td><td>spotify</td><td>musicfree</td><td></td></tr><tr><td>多媒体</td><td>音乐剪辑</td><td></td><td></td><td></td><td></td></tr><tr><td>多媒体</td><td>视频播放</td><td>完美解码</td><td></td><td>金狮视频</td><td></td></tr><tr><td>多媒体</td><td>视频剪辑</td><td>Shotcut</td><td></td><td></td><td></td></tr><tr><td>多媒体</td><td>图片采集</td><td>billfish</td><td>ImageAssistant</td><td></td><td></td></tr><tr><td>多媒体</td><td>图片看图</td><td>光影看图</td><td>JPEGviewer</td><td></td><td></td></tr><tr><td>多媒体</td><td>图片编辑</td><td>光影魔术手</td><td>PS</td><td>FastStone Photo Resizer</td><td></td></tr><tr><td>多媒体</td><td>数码暗房</td><td>Lightroom</td><td>darktable</td><td></td><td></td></tr><tr><td>多媒体</td><td>截图</td><td>Snipaste</td><td>FSCapture</td><td>PixPin</td><td></td></tr><tr><td>多媒体</td><td>录屏</td><td></td><td>ScreenToGif</td><td></td><td></td></tr><tr><td>多媒体</td><td>图形编辑</td><td>Inkscape</td><td>CorelDraw</td><td></td><td></td></tr><tr><td>多媒体</td><td>OCR</td><td>天若OCR</td><td>ABBYY FineReader Corp</td><td></td><td></td></tr><tr><td>多媒体</td><td>智能编辑</td><td>pixcv</td><td></td><td></td><td></td></tr><tr><td>多媒体</td><td>AICG</td><td>SD</td><td>mj/discord</td><td></td><td></td></tr><tr><td>办公阅读</td><td>Office文档</td><td>Microsoft365</td><td>小恐龙</td><td></td><td></td></tr><tr><td>办公阅读</td><td>思维导图</td><td>xmind</td><td>gitmind</td><td></td><td></td></tr><tr><td>办公阅读</td><td>流程图</td><td>IAuto</td><td>Draw.io</td><td></td><td></td></tr><tr><td>办公阅读</td><td>PDF阅读</td><td>SumatraPDF</td><td></td><td></td><td></td></tr><tr><td>办公阅读</td><td>PDF编辑</td><td>Acrobat</td><td></td><td></td><td></td></tr><tr><td>办公阅读</td><td>Markdown阅读</td><td>Zettlr</td><td></td><td></td><td></td></tr><tr><td>办公阅读</td><td>Markdown编辑</td><td></td><td>MarkText</td><td></td><td></td></tr><tr><td>办公阅读</td><td>电子书</td><td>Calibre Portable</td><td></td><td></td><td></td></tr><tr><td>办公阅读</td><td>文献阅读-中文</td><td>CAJViewer</td><td></td><td></td><td></td></tr><tr><td>办公阅读</td><td>文献阅读-英文</td><td>edge</td><td>chatpdf</td><td></td><td></td></tr><tr><td>办公阅读</td><td>翻译</td><td></td><td>deepl</td><td></td><td></td></tr><tr><td>办公阅读</td><td>词典</td><td>Eudic</td><td></td><td></td><td></td></tr><tr><td>办公阅读</td><td>会议</td><td>腾讯会议</td><td>讯飞听见</td><td>钉钉会议</td><td></td></tr><tr><td>办公阅读</td><td>任务管理</td><td>FlowUs</td><td></td><td></td><td></td></tr><tr><td>知识管理</td><td>知识采集</td><td>cubox</td><td>CintaNotes</td><td>Simplenote</td><td></td></tr><tr><td>知识管理</td><td>知识整理</td><td>思源笔记</td><td>Lattics</td><td></td><td>onenote</td></tr><tr><td>知识管理</td><td>知识发布</td><td>公众号</td><td></td><td></td><td></td></tr><tr><td>知识管理</td><td>博客编辑</td><td>Gridea</td><td></td><td></td><td></td></tr><tr><td>知识管理</td><td>图床</td><td>PicGo</td><td>weibo、SM.MS、Backblaze +  Cloudflare、腾讯云cos、七牛云、im.ge</td><td></td><td></td></tr><tr><td>知识管理</td><td>HTML编辑</td><td>kompozer（Mozilla）</td><td>Amaya（W3C）</td><td>google web designer</td><td></td></tr><tr><td>知识管理</td><td>原型设计</td><td></td><td>即时设计</td><td></td><td></td></tr><tr><td>知识管理</td><td>代码编辑</td><td>vscode</td><td>editplus</td><td>SciTE</td><td></td></tr><tr><td>知识管理</td><td>数据计算</td><td>py</td><td>matlab</td><td></td><td></td></tr><tr><td>知识管理</td><td>向量数据库</td><td></td><td></td><td></td><td></td></tr><tr><td>知识管理</td><td>通用大模型</td><td>chatbox</td><td>coze</td><td>POE</td><td></td></tr><tr><td>知识管理</td><td>垂直大模型</td><td></td><td></td><td></td><td></td></tr></tbody></table><div class="protyle-action__table"><div class="table__resize"></div><div class="table__select"></div></div></div><div class="protyle-attr" contenteditable="false"></div></div></div>
+<script src="appearance/icons/material/icon.js?3.1.6"></script>
+<script src="stage/build/export/protyle-method.js?3.1.6"></script>
+<script src="stage/protyle/js/lute/lute.min.js?3.1.6"></script>    
+<script>
+    window.siyuan = {
+      config: {
+        appearance: { mode: 0, codeBlockThemeDark: "base16/dracula", codeBlockThemeLight: "gradient-light" },
+        editor: { 
+          codeLineWrap: true,
+          fontSize: 16,
+          codeLigatures: false,
+          plantUMLServePath: "https://www.plantuml.com/plantuml/svg/~1",
+          codeSyntaxHighlightLineNum: false,
+          katexMacros: JSON.stringify({}),
+        }
+      },
+      languages: {copy:"复制"}
+    };
+    const previewElement = document.getElementById('preview');
+    Protyle.highlightRender(previewElement, "stage/protyle");
+    Protyle.mathRender(previewElement, "stage/protyle", false);
+    Protyle.mermaidRender(previewElement, "stage/protyle");
+    Protyle.flowchartRender(previewElement, "stage/protyle");
+    Protyle.graphvizRender(previewElement, "stage/protyle");
+    Protyle.chartRender(previewElement, "stage/protyle");
+    Protyle.mindmapRender(previewElement, "stage/protyle");
+    Protyle.abcRender(previewElement, "stage/protyle");
+    Protyle.htmlRender(previewElement);
+    Protyle.plantumlRender(previewElement, "stage/protyle");
+    document.querySelectorAll(".protyle-action__copy").forEach((item) => {
+      item.addEventListener("click", (event) => {
+            let text = item.parentElement.nextElementSibling.textContent.trimEnd();
+            text = text.replace(/ /g, " "); // Replace non-breaking spaces with normal spaces when copying
+            navigator.clipboard.writeText(text);
+            event.preventDefault();
+            event.stopPropagation();
+      })
+    });
+</script></body></html>

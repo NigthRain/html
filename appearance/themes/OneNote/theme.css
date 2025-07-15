@@ -1,0 +1,287 @@
+/* ----------------------------------------------------引入开始---------------------------------------------------------- */
+/* ————————————————————初始设置———————————————————— */
+/* 引入颜色和字体 */
+@import url("style/01-color-font/color-font.css");
+/* 引入一些初始设置 */
+@import url("style/07-others/begin-setting.css");
+/* 引入空行提示 */
+@import url("style/07-others/empty-letter.css");
+
+
+/* ————————————————————界面修改———————————————————— */
+/* 修改上左右dock栏样式 */
+@import url("style/02-appearance/dock.css");
+/* 修改正文A4纸大小 */
+@import url("style/02-appearance/A4.css");
+/* 修改文档树样式 */
+@import url("style/02-appearance/file-tree.css");
+/* 修改大纲样式 */
+@import url("style/02-appearance/outline.css");
+/* 修改标签页样式 */
+@import url("style/02-appearance/tab-bar.css");
+/* 修改面包屑样式 */
+@import url("style/02-appearance/breadcrumb.css");
+/* 修改鼠标滑选块时光标颜色 */
+@import url("style/02-appearance/mouse.css");
+/* 修改选中文字后弹出的悬浮工具栏的样式 */
+@import url("style/02-appearance/toolbar.css");
+/* 修改弹出菜单的样式 */
+@import url("style/02-appearance/meun.css");
+/* 修改按钮样式 */
+@import url("style/02-appearance/button.css");
+/* 修改设置界面样式 */
+@import url("style/02-appearance/setting-option.css");
+/* 修改警告界面样式 */
+/* @import url("style/02-appearance/warning-color.css"); */
+
+
+/* ————————————————————行内元素———————————————————— */
+/* 修改高亮样式 */
+@import url("style/03-inline-span/mark.css");
+/* 修改加粗样式 */
+@import url("style/03-inline-span/strong.css");
+/* 修改下划线样式 */
+@import url("style/03-inline-span/underline.css");
+/* 修改删除线样式 */
+@import url("style/03-inline-span/line-through.css");
+/* 修改块引用样式 */
+@import url("style/03-inline-span/block-ref.css");
+/* 修改超链接样式 */
+@import url("style/03-inline-span/a-link.css");
+/* 给网址链接设置颜色 */
+@import url("style/link-icon-color.css");
+/* 修改标签样式 */
+@import url("style/03-inline-span/tag.css");
+/* 修改键盘keyboard样式 */
+@import url("style/03-inline-span/keyboard.css");
+/* 修改行内代码样式 */
+@import url("style/03-inline-span/inline-code.css");
+/* 修改上标和下标样式 */
+@import url("style/03-inline-span/sup-sub.css");
+/* 修改更多字体的样式 */
+@import url("style/03-inline-span/strong-morestyle.css");
+
+/* ————————————————————块级元素———————————————————— */
+/* 修改表格样式 */
+@import url("style/04-block-div/table.css");
+/* 修改引用样式 */
+@import url("style/04-block-div/blockquote.css");
+/* 修改嵌入块样式 */
+@import url("style/04-block-div/render-node.css");
+/* 修改图片样式 */
+@import url("style/04-block-div/image.css");
+/* 修改列表样式 */
+@import url("style/04-block-div/list.css");
+/* 设置无序列表样式，来自于Roy的Notion主题 */
+@import url("style/04-block-div/unorder-list.css");
+/* 修改代码块样式 */
+@import url("style/04-block-div/code-block.css");
+/* 修改超级块样式 */
+@import url("style/04-block-div/super-block.css");
+/* 修改PDF双链的样式 */
+@import url("style/04-block-div/pdf.css");
+/* 修改分割线样式 */
+@import url("style/04-block-div/divider-fengexian.css");
+/* 修改标题样式 */
+@import url("style/04-block-div/NodeHeading-biaoti.css");
+/* 引入4种样式 */
+@import url("style/04-block-div/card.css");
+
+/* ————————————————————自定义属性———————————————————— */
+/* 增加文档的自定义属性 */
+@import url("style/05-custom-function-for-file/custom-function-for-file.css");
+/* 增加块的自定义属性 */
+@import url("style/06-custom-function-for-block/custom-function-for-block.css");
+
+/* ————————————————————引入自定义设置———————————————————— */
+/* 引入大家的自定义配置，放到widgets文件夹下，名称为custom.css */
+@import url(/widgets/custom.css);
+
+/* ----------------------------------------------------引入结束---------------------------------------------------------- */
+
+
+.layout__center .protyle-wysiwyg:not([data-doc-type="NodeDocument"]) {
+    animation: focus 0.3s ease-in-out;
+}
+.protyle-gutters {
+    transition: all 200ms ease-out;
+}
+@keyframes focus {
+	0% {transform: scaleY(1.3);
+	transform-origin: 0 0 ;
+		opacity: 0;}
+	100% { transform: scaleY(1); 
+	 }
+}
+@keyframes menu {
+	0% {opacity: 0;}
+	50% { transform: scale(1.01);
+	transform-origin: 0 0 ;
+          opacity: 0.5;	}
+	100% { transform: scale(1); 
+	 }
+}
+.b3-menu {
+    animation: menu 0.4s ease-in-out;
+}
+.b3-menu__submenu {
+animation: caidan 0.5s ease-in-out;
+}
+@keyframes caidan {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(-10px, -10px); /* Safari */
+    transform: translate(-20px, -0px); /* 标准语法 */
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0, 10px); /* Safari */
+    transform: translate(0, 0px); /* 标准语法 */
+  }
+  .b3-menu .b3-menu__submenu {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 6px 5px;
+  }
+}
+.b3-menu__item.b3-menu__item--readonly:hover {
+   background-color:transparent !important;
+   color:inherit !important;
+}
+
+@keyframes fullscreen { 0% { opacity: 0; } 50% { transform: scale(1.01); opacity: 0.5; } }
+
+.fullscreen {
+   z-index:2;
+   top:-30px;
+   animation:0.4s fullscreen ease-in-out;
+}
+body.body--win32 .fullscreen>.protyle-breadcrumb, body.body--win32 .fullscreen>.block__icons {
+   margin-top:30px;
+}
+.layout-tab-bar .item--full {
+   min-width:5em !important;
+}
+/*闪卡悬浮显示*/
+.card__main .protyle-wysiwyg span[data-type~=mark], [data-key="viewCards"] .protyle-wysiwyg span[data-type~=mark] {
+    border-bottom:2px solid var(--b3-protyle-inline-mark-color);
+    background-color:transparent !important;
+    padding: 0 2px;
+    background-image:none;
+}
+.card__block--hidemark span[data-type~=mark] {
+    border-bottom:2px solid var(--b3-protyle-inline-mark-color);
+    background-color:transparent !important;
+    padding: 0 2px;
+    background-image:none;
+}
+
+.protyle-hint{box-shadow:0 0 2px rgba(0,0,0,0.08), 0 4px 8px rgba(0,0,0,0.10);border-radius:0px}
+.protyle-hint.b3-list.b3-list--background.hint--menu{background:white;}
+/*.protyle-wysiwyg [data-node-id] span[data-type="tag"]{    color: var(--b3-protyle-inline-code-color);    background-color: rgba(119, 25, 170, 0.1);border-radius:10px;padding:3px 6px 2px 6px;font-size:90%}*/
+.color__square:last-child{margin-right:5px}
+.block__popover>.block__icons {
+    border-radius: 0;
+    background: #f8f9fa;
+}
+.protyle-wysiwyg [data-node-id] span[data-type='block-ref']{padding-inline:6px;/*text-decoration-color:var(--b3-theme-primary);text-underline-offset:5px*/}
+.protyle-wysiwyg [data-node-id] span[data-type='block-ref']:hover,.protyle-wysiwyg [data-node-id] span[data-type~=a][data-href*="siyuan://"]:hover{background-color:rgb(119 25 170 / 8%)}
+.protyle-wysiwyg [data-node-id] span[data-type~=a][data-href*="siyuan://"]::before{content:"@";background-image:none;color:var(--b3-theme-primary)}
+.tooltip{background-color:#2b2b2bdd;backdrop-filter:blur(1px)}
+.b3-typography code:not(.hljs), .protyle-wysiwyg code:not(.hljs), .protyle-wysiwyg span[data-type~=code],.b3-typography kbd, .b3-typography span[data-type~=kbd], .protyle-wysiwyg kbd, .protyle-wysiwyg span[data-type~=kbd]{margin:0px 2px}
+.protyle-wysiwyg [data-node-id][custom-riff-decks]{animation:unset !important}
+
+/*#searchList,
+#globalSearchList {
+    padding-right: 0px !important;
+}*/
+
+#searchList [data-type="search-item"],
+#globalSearchList [data-type="search-item"] {
+    display: block !important;
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+#searchList [data-type="search-item"]>.b3-list-item__graphic,
+#globalSearchList [data-type="search-item"]>.b3-list-item__graphic {
+    position: absolute;
+    margin-top: 6px !important;
+    margin-left: 2px !important;
+}
+
+#searchList [data-type="search-item"]>.b3-list-item__text,
+#globalSearchList [data-type="search-item"]>.b3-list-item__text {
+    margin-left: 22px;
+    max-height: 73px !important;
+    padding-top: 5px !important;
+    padding-bottom: 2px !important;
+    /*padding-right: 5px !important;*/
+    overflow-y: auto !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.3;
+    -webkit-box-orient: inherit !important;
+    white-space:normal !important;
+}
+#searchList ::-webkit-scrollbar, #globalSearchList ::-webkit-scrollbar {
+   width:0px;
+}
+
+#searchList [data-type="search-item"]>.b3-list-item__meta.b3-list-item__meta--ellipsis,
+#globalSearchList [data-type="search-item"]>.b3-list-item__meta.b3-list-item__meta--ellipsis {
+    display: block !important;
+    max-width: 95% !important;
+    margin-top: -7px !important;
+    margin-bottom: -5px !important;
+    padding-left: 12px !important;
+}
+#searchList [data-type="search-item"], #globalSearchList [data-type="search-item"] {
+    margin-top:6px;
+    padding:2px 2px 4px 2px;
+    /*border-bottom:3px dotted var(--b3-border-color);*/
+    border-radius: 0px 0px 0px 0px;
+    /*padding-bottom:12px !important;*/
+   margin:6px 0px 0px 0px;
+}
+.b3-dialog__close,.b3-dialog__close:hover{opacity:0;cursor:default}
+
+
+html[data-theme-mode="dark"] body {
+    filter: invert(85%) hue-rotate(180deg);
+}
+html[data-theme-mode="dark"] body img,
+/*图片*/
+html[data-theme-mode="dark"] body video,
+/*视频*/
+html[data-theme-mode="dark"] body canvas:not(.pdfViewer canvas),
+/*canvas，排除PDF*/
+html[data-theme-mode="dark"] body .protyle-background__icon,
+/*文档头部emj图标*/
+html[data-theme-mode="dark"] body #toolbarVIP,
+/*订阅用户图标*/
+html[data-theme-mode="dark"] body [data-type="tag"]::before,
+/*标签图标*/
+html[data-theme-mode="dark"] body [data-type="file-annotation-ref"]::before,
+/*pdf引用图标*/
+html[data-theme-mode="dark"] body .code-block::after,
+/*pdf引用图标*/
+html[data-theme-mode="dark"] body .b3-list-item__icon,
+/*菜单列表项图标*/
+html[data-theme-mode="dark"] body .b3-list-item__graphic:not(.popover__block),
+/*大纲文档名图标*/
+html[data-theme-mode="dark"] body .emojis__item,
+/*emj面板图标*/
+html[data-theme-mode="dark"] body .emojis__type,
+/*emj面板图标类型图标*/
+html[data-theme-mode="dark"] body .toolbar__item::after,
+/*头栏信息提示泡*/
+html[data-theme-mode="dark"] body .iframe-content>iframe,
+/*iframe*/
+html[data-theme-mode="dark"] body .item__preview,
+html[data-theme-mode="dark"] body .tooltip
+
+{
+    filter: invert(125%) hue-rotate(180deg);
+}
+.b3-typography s, .b3-typography span[data-type~=s], .protyle-wysiwyg s, .protyle-wysiwyg span[data-type~=s]{opacity:.68}
